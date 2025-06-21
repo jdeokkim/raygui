@@ -32,7 +32,6 @@ int main()
 
     float valueBoxValue = 0.0f;
     bool valueBoxEditMode = false;
-    char valueBoxTextValue[32] = { 0 };
 
     SetTargetFPS(60);
     //--------------------------------------------------------------------------------------
@@ -51,7 +50,7 @@ int main()
 
             ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
 
-            if (GuiValueBoxFloat((Rectangle){ 25, 175, 125, 30 }, NULL, valueBoxTextValue, &valueBoxValue, valueBoxEditMode)) 
+            if (GuiValueBoxFloat((Rectangle){ 55, 175, 125, 30 }, "Value: ", &valueBoxValue, -1.0f, 1.0f, valueBoxEditMode)) 
             {
                 valueBoxEditMode = !valueBoxEditMode;
                 
